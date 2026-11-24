@@ -1,11 +1,11 @@
 <?php
 
-$host    = getenv('DB_HOST') ?: 'localhost';
+$host    = getenv('DB_HOST') ?: '';
 $port    = getenv('DB_PORT') ?: '5432';
-$dbname  = getenv('DB_NAME') ?: 'internprove';
-$dbuser  = getenv('DB_USER') ?: 'postgres';
-$dbpass  = getenv('DB_PASS') ?: 'DURS';
-$sslmode = getenv('DB_SSLMODE') ?: 'prefer';   
+$dbname  = getenv('DB_NAME') ?: '';
+$dbuser  = getenv('DB_USER') ?: '';
+$dbpass  = getenv('DB_PASS') ?: '';
+$sslmode = getenv('DB_SSLMODE') ?: 'require';   
 
 define('BASE_URL', getenv('BASE_URL') ?: '/internprove/');
 
@@ -16,5 +16,5 @@ try {
     
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
-    die('Could not connect to the database. Check includes/db.php. ' . $e->getMessage());
+    die('Could not connect to the database. ' );
 }
