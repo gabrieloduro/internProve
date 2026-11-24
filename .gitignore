@@ -1,0 +1,26 @@
+# Environment & credential files
+.env
+.env.local
+.env.*.local
+includes/db.local.php
+config.local.php
+
+# Database dumps & backups
+*.sql
+*.dump
+*.bak
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs & temporary files
+*.log
+/tmp/
+/temp/
